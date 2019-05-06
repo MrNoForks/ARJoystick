@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARJoystick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6g-GJ-rVa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ER5-df-JSf">
+                                <rect key="frame" x="185.5" y="673" width="170" height="106"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9l-4p-EQc">
+                                        <rect key="frame" x="55.5" y="0.0" width="59" height="30"/>
+                                        <color key="backgroundColor" red="0.49650021849999998" green="1" blue="0.53005900640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Up"/>
+                                        <connections>
+                                            <action selector="joystickPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Asl-tn-aXY"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z20-Kp-dRe">
+                                        <rect key="frame" x="22" y="38" width="126" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXU-k1-LEq">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                                <color key="backgroundColor" red="0.49650021849999998" green="1" blue="0.53005900640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Left"/>
+                                                <connections>
+                                                    <action selector="joystickPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1yb-2x-PYC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55t-1F-tbj">
+                                                <rect key="frame" x="67" y="0.0" width="59" height="30"/>
+                                                <color key="backgroundColor" red="0.49650021849999998" green="1" blue="0.53005900640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Right"/>
+                                                <connections>
+                                                    <action selector="joystickPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yf3-IL-4ky"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RU-sa-KfT">
+                                        <rect key="frame" x="55.5" y="76" width="59" height="30"/>
+                                        <color key="backgroundColor" red="0.49650021849999998" green="1" blue="0.53005900640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Down"/>
+                                        <connections>
+                                            <action selector="joystickPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZMf-g2-ejM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="x9l-4p-EQc" firstAttribute="width" secondItem="rXU-k1-LEq" secondAttribute="width" id="4d9-o7-EWK"/>
+                                    <constraint firstAttribute="width" constant="170" id="MPs-6J-WJl"/>
+                                    <constraint firstAttribute="height" constant="106" id="WhG-0p-mOf"/>
+                                    <constraint firstItem="7RU-sa-KfT" firstAttribute="width" secondItem="rXU-k1-LEq" secondAttribute="width" id="lY2-yT-RwC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c6g-GJ-rVa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2aT-gl-ZcC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c6g-GJ-rVa" secondAttribute="bottom" id="EhG-AP-qFF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c6g-GJ-rVa" secondAttribute="trailing" id="QtW-xv-Ydt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ER5-df-JSf" secondAttribute="bottom" constant="83" id="j8h-OG-Hxu"/>
+                            <constraint firstItem="c6g-GJ-rVa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jGW-EI-onF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ER5-df-JSf" secondAttribute="trailing" constant="58.5" id="mPI-MJ-PNr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="c6g-GJ-rVa" id="qAa-si-EUO"/>
+                        <outlet property="stackViewButton" destination="ER5-df-JSf" id="SVr-gx-tqd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
